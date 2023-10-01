@@ -1,0 +1,184 @@
+@mixin art-postBg()
+{
+	// Sass-Overrides im Template-Stil
+	@if variable-exists(art-postBg)
+	{
+		background-color: $art-postBg;
+	} @else {
+    background-color: $art-postBg-custom;
+  }
+}
+@mixin areaStandardPadding()
+{
+	padding: var(--#{$prefix}gutter-x);
+}
+@mixin fontFamilyHeader()
+{
+	// Sass-Overrides im Template-Stil
+	@if variable-exists(fontFamilyHeader)
+	{
+		font-family: $fontFamilyHeader;
+	} @else {
+    font-family: inherit;
+  }
+}
+@function blockquoteColoredValue($result: $blockquoteColor-custom)
+{
+	@if variable-exists(blockquoteColor)
+	{
+		$result: $blockquoteColor;
+	}
+	@return $result;
+}
+@mixin blockquoteColored()
+{
+	// Sass-Overrides im Template-Stil
+	@if variable-exists(blockquoteBg)
+	{
+		background-color: $blockquoteBg;
+	} @else {
+    background-color: $blockquoteBg-custom;
+  }
+	@if variable-exists(blockquoteColor)
+	{
+		color: $blockquoteColor;
+	} @else {
+    color: $blockquoteColor-custom;
+  }
+}
+@mixin astroid-mobilemenuBgGradient()
+{
+	@if variable-exists(astroid-mobilemenuBgGradient) and $astroid-mobilemenuBgGradient
+	{
+		//background: linear-gradient(to bottom, #CDC6BC 0, #DAD5CE 20%, #CDC6BC 50%, #C4BCB1 80%, #CDC6BC 100%) no-repeat;
+		//@include gradient-y-three-colors(#CDC6BC, #DAD5CE, 50%, #C4BCB1);
+		//@include gradient-y-three-colors($astroid-mobilemenuBgGradient, lighten($astroid-mobilemenuBgGradient, 10%), 50%, $astroid-mobilemenuBgGradient);
+		@include gradient-y(lighten($astroid-mobilemenuBgGradient, 10%), $astroid-mobilemenuBgGradient);
+	}
+}
+
+@function backslasher($string)
+{
+ @return unquote("\"") + unquote(str-insert($string, "\\", 1)) + unquote("\"");
+}
+
+// aus sandra-masemann. Nur teils genutzt(?)
+@mixin rfsPadding(
+	$top: $mainSpacerCustom,
+	$bottom: $mainSpacerCustom,
+	$left: 0,
+	$right: 0)
+{
+	// not matcht null.
+	@if not $top {
+		$top: $mainSpacerCustom;
+	}
+	@if not $bottom {
+		$bottom: $mainSpacerCustom;
+	}
+	@if not $left {
+		$left: 0;
+	}
+	@if not $right {
+		$right: 0;
+	}
+	@include rfs($top $right $bottom $left, padding);
+}
+@mixin disabled()
+{
+	pointer-events: none;
+	cursor: not-allowed;
+}
+
+@mixin border-color-y($color)
+{
+	border-top-color: $color;
+	border-bottom-color: $color;
+}
+
+@mixin border-color-x($color)
+{
+	border-left-color: $color;
+	border-right-color: $color;
+}
+
+@mixin border-top-dashed($color: $gray-600)
+{
+	border-top: $border-width dashed $color !important;
+}
+
+@mixin border-bottom-dashed($color: $gray-600)
+{
+	border-bottom: $border-width dashed $color !important;
+}
+
+@mixin dontPrintThis()
+{
+	display:none !important;
+	visibility:hidden !important;
+}
+@mixin PrintThis()
+{
+	display:block !important;
+	visibility:visible !important;
+}
+@mixin bold($strength: 700)
+{
+	font-weight: $strength !important;
+}
+
+// Fight against JCE with !important.
+@mixin block()
+{
+  border-radius: $border-radius-zero;
+	border-width: 1px !important;;
+	border-style: solid !important;
+  padding: 6px !important;;
+	margin-top: ($spacer * 1) !important;;
+	margin-bottom: ($spacer * 1) !important;;
+}
+
+@mixin a-with-dark-bg($color: $white, $hoverColor: lighten($red, 30%))
+{
+		color: $color;
+		text-decoration: underline;
+		&:hover
+		{
+			color: $hoverColor;
+			text-decoration: none;
+		}
+}
+
+// Da extends z.B. in editor.scss zu nervig.
+@mixin ghsvs_img-left()
+{
+  float: left;
+  margin-right: 1rem;
+}
+
+@mixin ghsvs_img-right()
+{
+  float:right;
+  margin-left: 1rem;
+}
+
+@mixin ghsvs_img-full()
+{
+	width: 100% !important;
+	height: auto !important;
+  max-width: none !important;
+}
+
+// z.B. sliderSection, bannerSection.
+// Bei diesen Gradients geht es darum, dass der innere sich etwas absetzt vom äußeren.
+// z.B. im Slider müssen die Bilder kleiner sein als der verfügbare, innere Bereich.
+// So wird er kasten-mäßig angezeigt und hat die selben optischen Grenzen wie die weiteren Bereiche
+// der Sections bzw. containers/rows darunter.
+@mixin outerGradient()
+{
+	@include gradient-y-three-colors(darken($red, 10%), lighten($red, 20%), 50%, $red);
+}
+@mixin innerGradient()
+{
+	@include gradient-y-three-colors($red, lighten($red, 20%), 50%, darken($red, 5%));
+}

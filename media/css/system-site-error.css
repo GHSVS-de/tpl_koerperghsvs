@@ -1,0 +1,74 @@
+/**
+ * @copyright  (C) 2005 Open Source Matters, Inc. <https://www.joomla.org>
+ * @license    GNU General Public License version 2 or later; see LICENSE.txt
+ */
+/* Start Common Styles */
+* {
+
+}
+
+html {
+  height: 100%;
+  margin-bottom: 1px;
+}
+
+body {
+  height: 100%;
+  padding: 0;
+  padding-top: 0;
+  margin: 0;
+  margin-top: 0;
+  margin-bottom: 1px;
+  background: #fff;
+}
+
+.error {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#outline {
+  max-width: 95%;
+  padding: 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+#errorboxoutline {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #000;
+}
+
+#errorboxheader {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  line-height: 22px;
+  color: #fff;
+  text-align: center;
+  background: #e44249;
+  border-bottom: 1px solid #000;
+}
+
+#errorboxbody {
+  padding: 10px;
+  margin: 0;
+  text-align: left;
+}
+
+#techinfo {
+  padding: 10px;
+  margin: 10px;
+  color: #ccc;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+#techinfo p {
+  color: #ccc;
+}

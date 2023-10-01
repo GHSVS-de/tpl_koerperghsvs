@@ -1,0 +1,26 @@
+// Beachte, dass das Astroid-Framework weitere scss PHP-seitig einbindet, die nicht alle überschrieben werden können. Siehe auch: https://github.com/GHSVS-de/sandra-masemann.j4.ghsvs.de/discussions/5.
+
+@import "mixins";
+
+// Damit kann Awesome im Astroid-Plugin deaktiviert werden. Nervt eh, weil es Awesome doppelt lädt.
+
+
+//@import "fonts";
+// @import "root";
+// @import "areas-spaces-colors-etc.scss";
+// @import "astroid-framework-overrides";
+// @import "mod_splideghsvs";
+// @import "bootstrap-overrides";
+// @import "figure-and-images";
+// @import "hyphens";
+// @import "banner";
+// @import "boxenAusgabe";
+// @import "mod_acym";
+// @import "veroeffentlichungen";
+// @import "accordionTermine";
+@import "menu";
+@import "cleverreach";
+@import "svg-icons";
+@import "figure-and-images";
+@import "overridesGhsvs";
+@import "joomla-fontawesome-custom";

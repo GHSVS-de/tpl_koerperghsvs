@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension type="{{type}}" client="{{client}}" method="{{method}}">
+	<name>{{filename}}</name>
+	<author>{{authorName}}</author>
+	<creationDate>{{creationDate}}</creationDate>
+	<copyright>{{copyright}}</copyright>
+	<license>{{licenseLong}}</license>
+	<authorUrl>{{authorUrl}}</authorUrl>
+	<version>{{version}}</version>
+	<description>{{nameUpper}}_XML_DESCRIPTION</description>
+
+	<updateservers><server type="extension" priority="1" name="{{nameUpper}}">{{xmlserver}}/{{name}}-update.xml</server></updateservers>
+
+	<infourl>{{infourl}}</infourl>
+
+	<scriptfile>installerScript.php</scriptfile>
+	<minimumPhp>{{minimumPhp}}</minimumPhp>
+	<maximumPhp>{{maximumPhp}}</maximumPhp>
+	<minimumJoomla>{{minimumJoomla}}</minimumJoomla>
+	<maximumJoomla>{{maximumJoomla}}</maximumJoomla>
+	<allowDowngrades>{{allowDowngrades}}</allowDowngrades>
+	{{inheritable}}
+
+	<files>
+		<folder>html</folder>
+		<folder>language</folder>
+		<folder>src</folder>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>index.php</filename>
+		<filename>installerScript.php</filename>
+		<filename>joomla.asset.json</filename>
+		<filename>offline.php</filename>
+		<!-- Not implemented yet -->
+		<filename>print.php</filename>
+		<filename>templateDetails.xml</filename>
+	</files>
+
+	<media folder="media" destination="templates/site/koerperghsvs">
+		<folder>_stile-sicherungen</folder>
+		<folder>astroid</folder>
+		<folder>css</folder>
+		<folder>fonts</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>params</folder>
+		<folder>scss</folder>
+		<folder>scss-ghsvs</folder>
+	</media>
+	{{namespace}}
+	<positions>
+		<position>astroid-header</position>
+		<position>astroid-top-social</position>
+		<position>astroid-top-contact</position>
+		<position>slider</position>
+		<position>breadcrumb</position>
+		<position>aboveContent-1</position>
+		<position>content-top</position>
+		<position>content-bottom</position>
+		<position>left</position>
+		<position>right</position>
+		<position>newsletterSection-1</position>
+		<position>footer-1</position>
+		<position>footer-2</position>
+		<position>footer-3</position>
+		<position>footer-bar</position>
+		<position>copyright</position>
+		<position>headerBlock01</position>
+		<position>headerBlock02</position>
+		<position>offcanvas</position>
+		<position>debug</position>
+	</positions>
+
+	<config addfieldpath="/libraries/astroid/framework/fields"{{addfieldprefix}}>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="astroid" type="astroidmanagerlink"></field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

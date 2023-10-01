@@ -1,0 +1,35 @@
+{
+	"$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+	"name": "tpl_koerperghsvs",
+	"version": "2023.09.25",
+	"versionSub": "Astroid-2.6.6",
+	"description": "Joomla site template based on Astroid Framework with several dependencies.",
+	"license": "GNU General Public License version 3 or later; see LICENSE.txt.",
+	"assets": [
+		{
+			"name": "koerperghsvs.framework",
+			"description": "Viele weitere werden stinknormal von Astroid geladen.",
+			"type": "preset",
+			"dependencies": [
+				"jquery-noconflict#script",
+				"jquery-migrate#script",
+				"koerperghsvs.custom#script"
+			]
+		},
+		{
+			"name": "koerperghsvs.custom",
+			"description": "custom.css wird vom Astroid geladen, falls da. JS aber wohl nicht.",
+			"type": "script",
+			"uri": "custom.js",
+			"dependencies": [
+				"jquery"
+			]
+		},
+		{
+			"name": "fontawesome",
+			"description": "Derzeit in SCSS reinkopiert.",
+			"type": "style",
+			"uri": "system/joomla-fontawesome.min.css"
+		}
+	]
+}

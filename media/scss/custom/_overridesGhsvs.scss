@@ -1,0 +1,270 @@
+.art-postBg
+{
+	@include art-postBg();
+}
+// Für Bereiche wie Component Area.
+.areaStandardPadding
+{
+	@include areaStandardPadding();
+}
+// z.B. Stimmen über Arbeit
+.blockquoteColored
+{
+	@include blockquoteColored();
+}
+.fontFamilyHeader
+{
+	@include fontFamilyHeader();
+}
+.astroid-mobilemenuBgGradient
+{
+	@include astroid-mobilemenuBgGradient();
+}
+.text-justify
+{
+  text-align: justify !important;
+}
+// Funktioniert wohl mit Verdana nicht???
+.text-small
+{
+	font-size: .9rem;
+}
+.headerSection-max-width
+{
+	// Sass-Overrides im Template-Stil
+	@if variable-exists(headerSection-max-width)
+	{
+		max-width: $headerSection-max-width;
+	}
+}
+#headerSection
+{
+	@extend .headerSection-max-width;
+	@extend .mx-auto;
+}
+
+// Override Astroid:
+.astroid-component-section
+{
+	margin: $mainSpacerCustom 0;
+	padding: 0;
+}
+#footerMenuSection
+{
+	margin-top: $mainSpacerCustom;
+	border-top: 1px solid blockquoteColoredValue();
+	@extend .pt-3;
+	@extend .art-postBg;
+}
+#copyrightSection
+{
+	@extend .art-postBg;
+	padding-bottom: $mainSpacerCustom;
+	@extend .pt-3;
+}
+
+// Menü unten.
+.footer-bar
+{
+	a
+	{
+		//@extend .btn-link ;
+		//text-decoration: underline;
+		// color: white;
+		text-transform: uppercase;
+		// &.active
+		// {
+		// 	color: #e1d520;
+		// }
+	}
+	.nav
+	{
+		@extend .justify-content-center;
+	}
+}
+.footer-bar a:hover, .footer-bar a:focus {
+  //color: #e1d520;
+}
+
+.slogan
+{
+	@extend .text-center;
+	@extend .fw-bold;
+	@extend .fs-5;
+	margin-bottom: 0;
+  padding-bottom: 0;
+	.mod-custom :last-child
+	{
+	margin-bottom: 0;
+  padding-bottom: 0;
+	}
+}
+
+// Das ist ein mod_custom
+.art-headline, .art-slogan
+{
+	// font-size: 48px;
+	@extend .fontFamilyHeader;
+	// font-weight: bold;
+	// font-style: normal;
+	// text-decoration: none;
+	// text-align: left;
+	// padding: 0;
+	// margin: 0;
+	color: #8D1B49 !important;
+	// white-space: nowrap;
+}
+
+// Das bg-Bild wird in html\mod_custom\headerSectionBackground.php definiert.
+.astroid-container
+{
+	background-position: top left;
+  background-attachment: fixed;
+	background-repeat: repeat-x;
+	;
+}
+
+.astroid-mobilemenu
+{
+	// Sass-Overrides im Template-Stil
+	@if variable-exists(astroid-mobilemenuWidth)
+	{
+		width: $astroid-mobilemenuWidth;
+	}
+	@extend .astroid-mobilemenuBgGradient;
+
+
+}
+
+#ComponentArea
+{
+	@extend .art-postBg;
+	@extend .areaStandardPadding;
+
+}
+
+.slider
+{
+	@extend .art-postBg;
+	@extend .areaStandardPadding;
+	//@extend .py-3;
+
+	// Leider setzt das Modul slideshowck "moduleclass_sfx" doppelt. Deshalb .moduletable nötig, das von Astroid kommt.
+	.moduletable
+	{
+		&.slideshowContainer
+		{
+			max-width: 750px;
+			@extend .mx-auto;
+		}
+	}
+}
+
+$slideTextOpacityStart: .1;
+$slideTextOpacityEnd: 1;
+.SLIDEIN.changing {
+  animation-duration: 5s;
+  animation-name: SlideIn;
+}
+
+@keyframes SlideIn {
+  from {
+    margin-left: 100%;
+    width: 300%;
+		opacity: $slideTextOpacityStart;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+.slideText
+{
+	@extend .blockquoteColored;
+	padding: 10px 20px;
+	opacity: $slideTextOpacityEnd;
+	.headline
+	{
+		display: block;
+		@extend .fs-5;
+		@extend .fw-bold;
+	}
+}
+
+.articleBody p + blockquote
+{
+	margin-top: 1.5 * $spacer;
+}
+
+blockquote
+{
+	@extend .blockquote;
+	@extend .blockquoteColored;
+	@extend .areaStandardPadding;
+	@extend .text-center;
+	&::before, &::after
+	{
+		content: backslasher($faQuoteIconLeft);
+  	font-family: "Font Awesome 5 Free";
+  	font-weight: 900;
+		display: block;
+		font-size: 1.1em;
+		text-align: center;
+		border-radius: 100%;
+	}
+	&::before
+	{
+		border-bottom: 2px blockquoteColoredValue() solid;
+		margin-bottom: $spacer;
+		padding-bottom: $spacer*.5;
+	}
+	&::after
+	{
+		border-top: 2px blockquoteColoredValue() solid;
+		margin-top: $spacer;
+		padding-top: $spacer*.5;
+	}
+	// Override Astroid shit:
+	border-left: none;
+	//padding-left: 20px;
+	font-style: italic;
+	//font-weight: 600;
+	@extend .fw-normal;
+}
+
+.newsletterSection-1
+{
+	@extend .art-postBg;
+	@extend .areaStandardPadding;
+}
+
+.breadcrumbPosition
+{
+	@extend .d-flex;
+	@extend .justify-content-end;
+	.moduletable
+	{
+		margin: 0;
+		padding: 0;
+	}
+}
+.breadcrumb
+{
+	@extend .justify-content-end;
+}
+
+
+.articleBody
+{
+	h2, h3, h4, h5, h6
+	{
+		padding-top: $headings-padding-top-custom;
+	}
+}
+
+.btn-close
+{
+	background-color: $btn-close-bgColor;
+	border-radius: 50%;
+}

@@ -1,0 +1,35 @@
+{
+	"$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+	"name": "{{name}}",
+	"version": "{{version}}",
+	"versionSub": "{{versionSub}}",
+	"description": "{{description}}",
+	"license": "{{licenseLong}}",
+	"assets": [
+		{
+			"name": "koerperghsvs.framework",
+			"description": "Viele weitere werden stinknormal von Astroid geladen.",
+			"type": "preset",
+			"dependencies": [
+				"jquery-noconflict#script",
+				"jquery-migrate#script",
+				"koerperghsvs.custom#script"
+			]
+		},
+		{
+			"name": "koerperghsvs.custom",
+			"description": "custom.css wird vom Astroid geladen, falls da. JS aber wohl nicht.",
+			"type": "script",
+			"uri": "custom.js",
+			"dependencies": [
+				"jquery"
+			]
+		},
+		{
+			"name": "fontawesome",
+			"description": "Derzeit in SCSS reinkopiert.",
+			"type": "style",
+			"uri": "system/joomla-fontawesome.min.css"
+		}
+	]
+}

@@ -1,0 +1,100 @@
+/*
+Dieser variable_overrides.scss sind durch "Trick" in ./bootstrap.scss die
+Bootsrap Core variables.scss bekannt. Man kann also z.B. $spacer verwenden.
+
+Weiters können hier auch Bootstrap-Variablen verlässlich überschrieben werden.
+Weil Booststrap Core erst anschließend geladen wird.
+
+Einstellungen im Template-Stil overrulen aber oft hier gemachte einstellungen.
+Z.B. ein
+$body-bg: $gray-300;
+wird NICHT zu einem grauen Hintergrundführen, WENN im Stil Colors>Body>BackgroundColor
+was eingegeben ist.
+*/
+
+// Create your own map
+$custom-grays: (
+  "150": #f2f2f2
+);
+$grays: map-merge($grays, $custom-grays);
+
+// Siehe unten. Spielerei, um size bisschen leichter manipulieren zu können:
+$size-factor-custom: 0.75;
+
+// Gedacht für Abstände zwischen Blöcken/Sections:
+$mainSpacerCustom: $spacer * 3;
+
+// $body-bg: $gray-300;
+
+// $accordion-button-bg: $gray-100;
+// $accordion-button-color: $red;
+$accordion-button-active-color: $red;
+$accordion-button-active-bg: $gray-100;
+
+$accordion-button-focus-box-shadow: 0 0 0 0.25rem #d2d2d240;
+
+
+
+// image, figure and things
+$figure-caption-font-size: $font-size-base;
+$figure-caption-color: $body-color;
+$figure-caption-text-align-custom: center;
+$figure-caption-font-weight-custom: $font-weight-base;
+$figure-caption-line-height-custom: $line-height-base;
+$figure-caption-font-style-custom: italic;
+$figure-caption-bg-custom: $yellow-300;
+$figure-caption-font-family-custom: $font-family-base;
+$figure-max-width: 480px;
+$figure-max-width-sm: 190px;
+$figure-img-max-height-custom: 610px;
+$articleImage-max-width-custom: 650px;
+
+// Sass-Overrides im Template-Stil
+@if variable-exists(fontFamilySansSerif)
+{
+	$font-family-sans-serif: $fontFamilySansSerif;
+}
+
+@if variable-exists(headingsColor)
+{
+	$headings-color: $headingsColor;
+}
+
+
+$headings-margin-bottom: $spacer * 1.1;
+// Padding statt margin, da margins collapsen, wenn z.B. zuvor ein <p>.
+$headings-padding-top-custom: .5em;
+$h1-font-size: $font-size-base * 2.5 * $size-factor-custom;
+$h2-font-size: $font-size-base * 2 * $size-factor-custom;
+$h3-font-size: $font-size-base * 1.75 * $size-factor-custom;
+$h4-font-size: $font-size-base * 1.5 * $size-factor-custom;
+$h5-font-size: $font-size-base * 1.25 * $size-factor-custom;
+$h6-font-size: $font-size-base;
+
+$blockquote-font-size: $font-size-base * 1.1;
+$blockquoteBg-custom: #6B0530;
+$blockquoteColor-custom: $white;
+
+$art-postBg-custom: #f5f6f3;
+
+
+// https://ghsvs.de/programmierer-schnipsel/sonstige/314-sass-icons-backslash-unicode-character-quadrate-im-css
+$faQuoteIconRight: f10e;
+$faQuoteIconLeft: f10d;
+
+$breadcrumb-margin-bottom: 0;
+
+
+//$btn-close-width:            1em !default;
+//$btn-close-height:           $btn-close-width !default;
+//$btn-close-padding-x:        .25em !default;
+//$btn-close-padding-y:        $btn-close-padding-x !default;
+$btn-close-color: $white;
+$btn-close-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>");
+//$btn-close-focus-shadow:     $focus-ring-box-shadow !default;
+$btn-close-opacity: 1;
+// $btn-close-hover-opacity:    .75 !default;
+// $btn-close-focus-opacity:    1 !default;
+// $btn-close-disabled-opacity: .25 !default;
+// $btn-close-white-filter:     invert(1) grayscale(100%) brightness(200%) !default;
+$btn-close-bgColor: $red;

@@ -1,0 +1,81 @@
+//$menuLinkBg: #6b0530e6;
+$menuLinkColor: #DADED3;
+//$menuLinkBgHover: #8D1B49; s.u.
+$menuLinkBgActive: #8D1B49;
+
+// ul
+.astroid-mobile-menu > li > a
+{
+	text-transform: uppercase;
+}
+
+.astroid-mobilemenu-container .astroid-mobilemenu-inner .menu-item
+{
+	&.nav-item-deeper:hover
+	{
+		padding-left: .5rem;
+	}
+	&:not(.menu-go-back)
+	{
+		// Sass-Overrides im Template-Stil
+		@if variable-exists(menuLinkBg)
+		{
+			background-color: $menuLinkBg;
+		}
+
+		&:hover, &:focus
+		{
+			// Sass-Overrides im Template-Stil
+			@if variable-exists(menuLinkBgHover)
+			{
+				background-color: $menuLinkBgHover;
+			}
+			&.nav-item-active
+			{
+
+			}
+		}
+
+
+	}
+}
+.bg-modal {
+	//background-color: #fff3cd !important;
+	@extend .astroid-mobilemenuBgGradient;
+}
+.asideMenu
+{
+
+	.list-group {
+		--bs-list-group-color: #212529;
+		--bs-list-group-bg: #fff;
+		--bs-list-group-border-color: rgba(0,0,0,0.125);
+		--bs-list-group-border-width: 1px;
+		--bs-list-group-border-radius: 0.375rem;
+		--bs-list-group-item-padding-x: 1rem;
+		--bs-list-group-item-padding-y: 0.5rem;
+		--bs-list-group-action-color: #495057;
+		--bs-list-group-action-hover-color: #495057;
+		--bs-list-group-action-hover-bg: #f8f9fa;
+		--bs-list-group-action-active-color: #212529;
+		--bs-list-group-action-active-bg: #e9ecef;
+		--bs-list-group-disabled-color: #6c757d;
+		--bs-list-group-disabled-bg: #fff;
+		--bs-list-group-active-color: #fff;
+		--bs-list-group-active-bg: #990134;
+		--bs-list-group-active-border-color: #990134;
+	}
+	.list-group-item.active {
+		z-index: 2;
+		color: var(--bs-list-group-active-color);
+		background-color: var(--bs-list-group-active-bg);
+		border-color: var(--bs-list-group-active-border-color);
+	}
+	a.list-group-item-action {
+		text-decoration: underline;
+		color: var(--bs-list-group-active-bg);
+	}
+	.list-group-item-action:hover, .list-group-item-action:focus {
+		text-decoration: none;
+	}
+}

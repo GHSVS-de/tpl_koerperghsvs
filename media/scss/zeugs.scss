@@ -1,0 +1,76 @@
+/* Das sind bisher nur Fundsachen. Noch nicht implementiert. */
+
+// Linkfarben
+body .art-postcontent a,
+body .art-postcontent a:link {
+  color: #FA5B05;
+}
+body .art-postcontent a:visited,
+body .art-postcontent a.visited {
+  color: #e50b67;
+}
+
+
+
+// Blockquote-Bg
+$blockquoteBg-custom: #6B0530;
+$blockquoteColor-custom: #BBC2AD;
+
+// Menübuttonshintergrund, Transparenz
+$menuTopButtonBg: #6b0530e5;
+
+//mobilemenu_backgroundcolor mobilemenu_background_color
+$menuTopBg: #C8C1B6;
+
+// Footermenu. Impressum...
+$menuFooterColor: #B85242;
+
+// Überschriften, Backtotop im Backend eingegeben.
+$headlineColor: #800000;
+
+// Copyright-Text
+$copyrightColor: #80193e;
+
+// Mit background: zu verwenden.
+$headSternchenImage: #FFF url('../images/pageglare.png') top center no-repeat fixed;
+
+
+$menuLinkBg: #6b0530e6;
+$menuLinkColor: #DADED3;
+$menuLinkBgHover: #8D1B49;
+//$menuLinkBgActive: #8D1B49;
+$menuLinkBgActive: #F2EEED;
+$menuLinkColorActive: #636D50;
+
+//Top-Menü (Buttons):
+background-color:
+Hover background-color: #8D1B49;
+Active background-color: #F2EEED;
+text-transform: uppercase;
+color: #DADED3;
+
+//Top-Menü Submenü (Buttons):
+Hover background-color: #A2AD90;
+text-transform: lowercase;
+color: #D6DACD;
+Hover color: #000;
+
+ul.art-hmenu-ghsvs > li > a {
+	background: #6B0530;
+	background: #6b0530e6;
+	-webkit-border-radius: 0 4px 0 0;
+	-moz-border-radius: 0 4px 0 0;
+	border-radius: 0 4px 0 0;
+	border: 1px solid #555E45;
+	border-bottom: none;
+	padding: 0 32px;
+	margin: 0 auto;
+	position: relative;
+	display: block;
+	height: 40px;
+	cursor: pointer;
+	text-decoration: none;
+	color: #DADED3;
+	line-height: 40px;
+	text-align: center;
+}

@@ -1,0 +1,84 @@
+{
+	"name": "tpl_koerperghsvs",
+	"nameReal": "",
+	"filename": "koerperghsvs",
+	"version": "2023.09.25",
+	"versionCompare": "2023.09.25",
+	"versionSub": "Astroid-2.6.6",
+	"update": {
+		"infourl": "https://github.com/GHSVS-de/tpl_koerperghsvs{{thisRelease}}",
+		"versionsSubComment": "Für joomla.asset.json. Dort auszeichnen als {{versionsSub.bootstrap}} etc. Siehe tpl_bs4ghsvs für Anwendungs-Beispiel.",
+		"versionsSub": {
+		},
+		"type": "template",
+		"folder": "",
+		"client": "site",
+		"tag": "stable",
+		"targetplatform": [
+			"4.[3456789]"
+		],
+		"namespace": "GHSVS\\Template\\KoerperGhsvs",
+		"inheritable": 1
+	},
+	"releaseTxt": {
+		"title": "Joomla site template KoerperGhsvs (TPL_KOERPERGHSVS) based on Astroid Framework.",
+		"requires": [
+			"Astroid Framework (library \"astroid\")",
+			"Astroid Plugin (plg_system_astroid)"
+		],
+		"uses": [],
+		"language": ["en-GB"]
+	},
+	"changelog": {
+		"projecturl": "https://github.com/GHSVS-de/tpl_koerperghsvs",
+		"infosDE": "",
+		"infosEN": "",
+		"docsDE": "",
+		"docsEN": "",
+		"lastTests": [
+			"Joomla 4.3",
+			"PHP 8.1",
+			"Astroid Framework 2.6.6"
+		]
+	},
+	"minimumPhp": "8.1.0",
+	"maximumPhp": "8.99999.99999",
+	"minimumJoomla": "4.3.0",
+	"maximumJoomla": "4.9999.9999",
+	"allowDowngrades": "1",
+	"creationDate": "2023-09-25",
+	"licenseLong": "GNU General Public License version 3 or later; see LICENSE.txt.",
+	"copyright": "(C) 2019, G@HService Berlin Neukölln, Volkmar Volli Schlothauer.",
+	"author": {
+		"name": "G@HService Berlin Neukölln, Volkmar Volli Schlothauer",
+		"url": "https://ghsvs.de"
+	},
+	"contributors": [
+		{
+			"name": "G@HService Berlin Neukölln, Volkmar Volli Schlothauer",
+			"url": "https://ghsvs.de"
+		}
+	],
+	"bugs": "https://github.com/GHSVS-de/tpl_koerperghsvs/issues",
+	"homepage": "https://github.com/GHSVS-de/tpl_koerperghsvs#readme",
+	"keywords": [
+		"joomla",
+		"template",
+		"astroid framework"
+	],
+	"private": true,
+	"description": "Joomla site template based on Astroid Framework with several dependencies.",
+	"license": "GPL-3.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/GHSVS-de/tpl_koerperghsvs.git"
+	},
+	"scripts": {
+		"build": "node build.js",
+		"updateCheck": "npm outdated",
+		"update": "npm update --save-dev"
+	},
+	"dependencies": {},
+	"devDependencies": {},
+	"browserslist": []
+}
