@@ -147,7 +147,7 @@ foreach ($list as $item)
 <div class="asideMenu">
 	<!-- Button trigger modal -->
 	<div class="div4modalButton" >
-		<button type="button" class="btn btn-xs btn-warning" data-bs-toggle="modal" data-bs-target="#<?php echo $modalId ; ?>">
+		<button type="button" class="btn btn-outline-danger btn-sm text-nowrap" data-bs-toggle="modal" data-bs-target="#<?php echo $modalId ; ?>">
 			<span class="icon-list-view" aria-hidden="true"></span>
 			<?php #echo $parentTitle; ?>
 			<span class="icon-chevron-down" aria-hidden="true"></span>
