@@ -18,13 +18,13 @@ Das ist kein Template, das man installiert und dann läuft es reibungslos. Es br
 - PRETTY_PRINT
 
 ```
-// Bsp. 12.json war letzter, eigener Export oder das, was Astroid im Ordner
+// Bsp. 16.json war letzter, eigener Export oder das, was Astroid im Ordner
 //  media/templates/site/koerperghsvs/params/ abgelegt hat.
-// Targetinhalt 12-target.json wird dann nach media/astroid/default.json dieses
-//  Repos händisch hineinkopiert.
+// Targetinhalt 16-target.json wird dann nach media/astroid/default.json dieses
+//  Repos **händisch** hineinkopiert.
 
-$jsonFiles = ['12'];
-$jsonPath = __DIR__ . '/_stile-sicherungen';
+$jsonFiles = ['16'];
+$jsonPath = JPATH_SITE . '/media/templates/site/koerperghsvs/_stile-sicherungen';
 
 foreach ($jsonFiles as $fileName)
 {
