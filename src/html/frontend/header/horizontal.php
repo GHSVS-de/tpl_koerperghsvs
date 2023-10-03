@@ -37,23 +37,25 @@ $navWrapperClass = ['align-self-center', 'px-2', 'd-none', 'd-'.$header_breakpoi
 ?>
 <!-- header starts -->
 <header data-megamenu data-megamenu-class=".has-megamenu" data-megamenu-content-class=".megamenu-container" data-dropdown-arrow="<?php echo $params->get('dropdown_arrow', 0) ? 'true' : 'false'; ?>" data-header-offset="true" data-transition-speed="<?php echo $params->get('dropdown_animation_speed', 300); ?>" data-megamenu-animation="<?php echo $params->get('dropdown_animation_type', 'fade'); ?>" data-easing="<?php echo $params->get('dropdown_animation_ease', 'linear'); ?>" data-astroid-trigger="<?php echo $params->get('dropdown_trigger', 'hover'); ?>" data-megamenu-submenu-class=".nav-submenu,.nav-submenu-static" id="astroid-header" class="<?php echo implode(' ', $class); ?>">
-	<div class="d-flex flex-row justify-content-between">
+	<div class="d-flex flex-column flex-sm-row justify-content-sm-between">
 
-		<div class="header-left-section d-flex justify-content-start">
-			<?php #$document->include('logo'); ?>
+		<div class="header-left-section d-flex flex-column flex-sm-row justify-content-sm-start">
 			<?php $document->include('logo_normal'); ?>
+
 			<?php if ($block_2_type != 'blank')
 			{ ?>
-			<div class="header-left-block d-nonesss d-<?php echo $header_breakpoint; ?>-block align-self-center ms-2 me-3">
+			<div class="align-self-center">
 				<?php
+				// Hier im gedachten Normalfall ein custom module mit den Seitenüberschriften h1 und h2.
 				if ($block_2_type == 'position')
-				{
-					echo '<div class="header-block-item d-flex justify-content-start align-items-center">';
-					echo $document->position($block_2_position, 'xhtml');
-					echo '</div>';
+				{ ?>
+				<div class="siteTitle text-center text-sm-start d-sm-flex justify-content-sm-start align-items-sm-center pe-sm-2">
+					<?php echo $document->position($block_2_position, 'xhtml'); ?>
+				</div><!--/.siteTitle-->
+				<?php
 				} else if ($block_2_type == 'custom')
 				{
-					echo '<div class="header-block-item d-flex justify-content-start align-items-center">';
+					echo '<div class="d-flex justify-content-start align-items-center">';
 					echo $block_2_custom;
 					echo '</div>';
 				} ?>
@@ -62,19 +64,24 @@ $navWrapperClass = ['align-self-center', 'px-2', 'd-none', 'd-'.$header_breakpoi
 			} ?>
 		</div><!--/.header-left-section -->
 
-		<div class="header-right-section d-flex justify-content-end">
-<?php if (!empty($header_mobile_menu)) { ?>
-
+		<?php # Klasse .navbar letztlich nur, damit Bootstrap-Variablen für .navbar-toggler etc. generiert werden. ?>
+		<div class="header-right-section d-flex justify-content-end navbar">
+			<?php if (!empty($header_mobile_menu))
+			{ ?>
 			<div class="align-self-center" data-offcanvas="#astroid-mobilemenu"
 				data-effect="mobilemenu-slide">
 				<button aria-label="<?php echo Text::_('GHSVS_MOBILEMENU_TOGGLE'); ?>"
-					class="btn btn-warning p-0 px-1" type="button">
-					<span aria-hidden="true" class="svgSpan svg-lg svg-2x"><?php echo Text::_('GHSVS_SVG_MOBILEMENU_BUTTON'); ?></span><br><?php echo Text::_('GHSVS_MOBILEMENU_MENU'); ?>
+					class="navbar-toggler" type="button">
+					<span class="navbar-toggler-icon"></span>
+					<!--/ <span class="icon-menu fa-2x"></span>
+					<span aria-hidden="true" class="svgSpan svg-lg svg-2x"><?php echo Text::_('GHSVS_SVG_MOBILEMENU_BUTTON'); ?></span><span class="togglerLabel d-none"><?php echo Text::_('GHSVS_MOBILEMENU_MENU'); ?></span>
+					-->
 				</button>
-	</div>
+			</div>
+			<?php
+			} ?>
+		</div><!--/.header-right-section -->
 
-<?php } ?>
-		</div>
 	</div><!--/justify-content-between -->
 </header>
 <!-- header ends -->
