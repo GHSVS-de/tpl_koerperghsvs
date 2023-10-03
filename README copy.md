@@ -13,3 +13,9 @@
 ## System - Hyphenateghsvs
 
 ## System - ImportFonts by GHSVS.de
+
+# Icon-Fonts
+- Verwendet hart einkodiert und im Template abgelegten "Font Awesome 5 Free".
+  - `media\templates\site\koerperghsvs\fonts\`
+- Verwendet dazu passend hart einkodiert `joomla-fontawesome.css` aus Joomla 4.3.4, so, dass auch die icon-xyz-Klassen verwendet werden können.
+  - `media\templates\site\koerperghsvs\scss\custom\_joomla-fontawesome-custom.scss`
