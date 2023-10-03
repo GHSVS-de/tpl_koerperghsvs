@@ -100,20 +100,7 @@
 	}
 }
 
-// Das ist ein mod_custom
-.art-headline, .art-slogan
-{
-	// font-size: 48px;
-	@extend .fontFamilyHeader;
-	// font-weight: bold;
-	// font-style: normal;
-	// text-decoration: none;
-	// text-align: left;
-	// padding: 0;
-	// margin: 0;
-	color: #8D1B49 !important;
-	// white-space: nowrap;
-}
+
 
 // Das bg-Bild wird in html\mod_custom\headerSectionBackground.php definiert.
 .astroid-container
@@ -239,10 +226,18 @@ blockquote
 	@extend .areaStandardPadding;
 }
 
+#breadcrumbSection
+{
+	@extend .bg-light;
+	@extend .py-1;
+	border-bottom: 1px solid blockquoteColoredValue();
+}
+
 .breadcrumbPosition
 {
 	@extend .d-flex;
-	@extend .justify-content-end;
+	//@extend .justify-content-center;
+	@extend .align-items-center;
 	.moduletable
 	{
 		margin: 0;
@@ -251,7 +246,7 @@ blockquote
 }
 .breadcrumb
 {
-	@extend .justify-content-end;
+	//@extend .justify-content-sm-end;
 }
 
 
@@ -261,10 +256,60 @@ blockquote
 	{
 		padding-top: $headings-padding-top-custom;
 	}
+	ul
+	{
+		padding-left: 1rem;
+		li
+		{
+			margin-bottom: $spacer * .5;
+			padding-left: $spacer * .5;
+		}
+	}
 }
-
+.com-content-category__table th
+{
+	@extend .fw-normal;
+}
+.pagenavigation .btn
+{
+	margin-top: $spacer * .25;
+}
 .btn-close
 {
 	background-color: $btn-close-bgColor;
 	border-radius: 50%;
+}
+
+
+// Header-Zeugs, Slogan-Zeugs.
+// Das ist ein mod_custom mit einem h1 und einem h2.
+.mod-custom.siteTitle
+{
+	h1, h2
+	{
+		@extend .fontFamilyHeader;
+		color: #8D1B49 !important;
+	}
+	h2
+	{
+		margin-bottom: 0;
+	}
+}
+@include media-breakpoint-down(sm)
+{
+	.astroid-logo img
+	{
+		max-height: 4rem;
+	}
+	.mod-custom.siteTitle
+	{
+		h1
+		{
+			margin-bottom: 0;
+		}
+		h2
+		{
+			margin-bottom: $spacer;
+		}
+	}
 }
