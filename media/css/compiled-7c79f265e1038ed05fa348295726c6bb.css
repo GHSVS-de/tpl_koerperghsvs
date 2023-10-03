@@ -6615,7 +6615,7 @@ textarea.form-control-lg {
 .justify-content-start {
   justify-content: flex-start !important;
 }
-.justify-content-end, .breadcrumbPosition, .breadcrumb {
+.justify-content-end {
   justify-content: flex-end !important;
 }
 .justify-content-center, .footer-bar .nav {
@@ -14296,7 +14296,7 @@ figcaption {
   background-color: #6B0530;
   color: #BBC2AD;
 }
-.fontFamilyHeader, .art-headline, .art-slogan {
+.fontFamilyHeader, .mod-custom.siteTitle h1, .mod-custom.siteTitle .h1, .mod-custom.siteTitle h2, .mod-custom.siteTitle .h2 {
   font-family: 'Fredericka the Great', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 .astroid-mobilemenuBgGradient, .bg-modal, .astroid-mobilemenu {
@@ -14333,9 +14333,6 @@ figcaption {
   margin-bottom: 0;
   padding-bottom: 0;
 }
-.art-headline, .art-slogan {
-  color: #8D1B49 !important;
-}
 .astroid-container {
   background-position: top left;
   background-attachment: fixed;
@@ -14368,6 +14365,9 @@ figcaption {
 }
 .slideText .headline {
   display: block;
+}
+.articleBody p + blockquote {
+  margin-top: 1.5rem;
 }
 blockquote {
   border-left: none;
@@ -14402,6 +14402,23 @@ blockquote::after {
 .btn-close {
   background-color: #AA0747;
   border-radius: 50%;
+}
+.mod-custom.siteTitle h1, .mod-custom.siteTitle .h1, .mod-custom.siteTitle h2, .mod-custom.siteTitle .h2 {
+  color: #8D1B49 !important;
+}
+.mod-custom.siteTitle h2, .mod-custom.siteTitle .h2 {
+  margin-bottom: 0;
+}
+@media (max-width: 575.98px) {
+  .astroid-logo img {
+    max-height: 4rem;
+  }
+  .mod-custom.siteTitle h1, .mod-custom.siteTitle .h1 {
+    margin-bottom: 0;
+  }
+  .mod-custom.siteTitle h2, .mod-custom.siteTitle .h2 {
+    margin-bottom: 1rem;
+  }
 }
 /*!
  * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
