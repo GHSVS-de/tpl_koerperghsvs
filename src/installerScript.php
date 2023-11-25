@@ -13,7 +13,10 @@ class  koerperghsvsInstallerScript extends InstallerScript
 	 * @var    array
 	 * @since  2.0
 	 */
-	protected $deleteFiles = [];
+	protected $deleteFiles = [
+		'/templates/koerperghsvs/language/en-GB/en-GB.tpl_koerperghsvs.ini',
+		'/templates/koerperghsvs/language/en-GB/en-GB.tpl_koerperghsvs.sys.ini',
+	];
 
 	/**
 	 * A list of folders to be deleted with method removeFiles().
