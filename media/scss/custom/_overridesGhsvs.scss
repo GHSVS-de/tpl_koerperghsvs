@@ -37,9 +37,32 @@
 		max-width: $headerSection-max-width;
 	}
 }
+.article-max-width
+{
+	// Sass-Overrides im Template-Stil
+	@if variable-exists(article-max-width)
+	{
+		max-width: $article-max-width;
+	}
+}
+.logoImg-max-height
+{
+	// Sass-Overrides im Template-Stil
+	@if variable-exists(logoImg-max-height)
+	{
+		max-height: $logoImg-max-height;
+	}
+}
 #headerSection
 {
 	@extend .headerSection-max-width;
+	@extend .mx-auto;
+}
+
+// bzw. .item-page
+.com-content-article
+{
+	@extend .article-max-width;
 	@extend .mx-auto;
 }
 
@@ -68,20 +91,21 @@
 {
 	a
 	{
-		//@extend .btn-link ;
-		//text-decoration: underline;
-		// color: white;
 		text-transform: uppercase;
-		// &.active
-		// {
-		// 	color: #e1d520;
-		// }
 	}
+
+	// ist .navHorizontalView
 	.nav
 	{
 		@extend .justify-content-center;
+
+		// Sonst zu eng beieinander, wenn mehrzeilig wird.
+		li {
+			margin-bottom: .75rem;
+		}
 	}
 }
+
 .footer-bar a:hover, .footer-bar a:focus {
   //color: #e1d520;
 }
@@ -295,6 +319,12 @@ blockquote
 		margin-bottom: 0;
 	}
 }
+
+.astroid-logo img
+{
+	@extend .logoImg-max-height;
+}
+
 @include media-breakpoint-down(sm)
 {
 	.astroid-logo img
@@ -312,4 +342,8 @@ blockquote
 			margin-bottom: $spacer;
 		}
 	}
+}
+
+.card-ghsvs .card-layout {
+	box-shadow: none !important;
 }

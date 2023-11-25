@@ -14,7 +14,7 @@ img
 figure.autoLimited
 {
 	padding: 2px 1px;
-	border: 2px dotted $red-300;
+	border: 2px solid $red-300;
 	// background-color: $red-400;
 	@extend .blockquoteColored;
 	text-align: center;
