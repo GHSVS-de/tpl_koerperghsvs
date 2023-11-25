@@ -31,7 +31,6 @@
 			"description": "",
 			"type": "script",
 			"uri": "https://www.google.com/recaptcha/api.js",
-			"dependencies": [],
       "attributes": {
         "async": true,
 				"defer": true
