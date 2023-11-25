@@ -71,7 +71,7 @@ if ($logo_link_type === 'custom')
 <?php if ($logo_type == 'text') : ?>
    <!-- text logo starts -->
    <?php
-   $mr = ($header_mode == 'stacked' && ($header_stacked_menu_mode == 'seperated' || $header_stacked_menu_mode == 'center')) ? '' : ' mr-0 mr-lg-4';
+   $mr = ($header_mode == 'stacked' && ($header_stacked_menu_mode == 'seperated' || $header_stacked_menu_mode == 'center')) ? '' : ' me-0 me-sm-2';
    ?>
    <div class="logo-wrapper <?php echo implode(' ', $class); ?> flex-column<?php echo $mr; ?>">
       <a target="<?php echo $logo_link_target; ?>" class="site-title" href="<?php echo $logo_link; ?>"><?php echo $logo_text; ?></a>
@@ -82,7 +82,7 @@ if ($logo_link_type === 'custom')
 <?php if ($logo_type == 'image') : ?>
    <!-- image logo starts -->
    <?php
-   $mr = ($header_mode == 'stacked' && ($header_stacked_menu_mode == 'seperated' || $header_stacked_menu_mode == 'center')) ? '' : ' mr-0 mr-lg-4';//mr-0 mr-lg-4
+   $mr = ($header_mode == 'stacked' && ($header_stacked_menu_mode == 'seperated' || $header_stacked_menu_mode == 'center')) ? '' : ' me-0 me-sm-2';//mr-0 mr-lg-4
 	 #echo ' 4654sd48sa7d98sD81s8d71dsa <pre>' . print_r($mr, true) . '</pre>';exit;
    ?>
    <div class="logo-wrapper">

@@ -25,9 +25,9 @@ use Joomla\CMS\WebAsset\WebAssetManager;
 		{
 			$showHereClass = ' visually-hidden';
 		} ?>
-		<li class="breadcrumb-item4showHere">
+		<li class="breadcrumb-item4showHere<?php echo $showHereClass; ?>">
 			<?php echo Text::_('GHSVS_SVG_GEO-FILL'); ?>
-			<span class="<?php echo $showHereClass; ?>">
+			<span class="">
 				<?php echo Text::_('MOD_BREADCRUMBS_HERE'); ?>
 			</span>
 		</li>

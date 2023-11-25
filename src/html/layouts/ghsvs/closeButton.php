@@ -9,5 +9,5 @@ $dismissType = $options->get('dismissType', 'modal');
 ?>
 <button type="button" class="btn btn-secondary"
 	data-bs-dismiss="<?php echo $dismissType; ?>">
-<?php echo Text::_('PLG_SYSTEM_BS3GHSVS_CLOSE'); ?>
+<?php echo Text::_('JCLOSE'); ?>
 </button>

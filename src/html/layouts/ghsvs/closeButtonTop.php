@@ -13,5 +13,5 @@ $class = $options->get('class', '');
 ?>
 <button type="button" class="btn-close <?php echo $class; ?>"
 	data-bs-dismiss="<?php echo $dismissType; ?>"
-	aria-label="<?php echo Text::_('PLG_SYSTEM_BS3GHSVS_CLOSE'); ?>">
+	aria-label="<?php echo Text::_('JCLOSE'); ?>">
 </button>
