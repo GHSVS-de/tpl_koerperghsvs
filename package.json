@@ -2,9 +2,9 @@
 	"name": "tpl_koerperghsvs",
 	"nameReal": "",
 	"filename": "koerperghsvs",
-	"version": "2023.10.04",
-	"versionCompare": "2023.09.25",
-	"versionSub": "Astroid-2.6.6",
+	"version": "2023.11.24",
+	"versionCompare": "2023.10.04",
+	"versionSub": "Astroid-3.0.5",
 	"update": {
 		"infourl": "https://github.com/GHSVS-de/tpl_koerperghsvs{{thisRelease}}",
 		"versionsSubComment": "Für joomla.asset.json. Dort auszeichnen als {{versionsSub.bootstrap}} etc. Siehe tpl_bs4ghsvs für Anwendungs-Beispiel.",
@@ -15,7 +15,8 @@
 		"client": "site",
 		"tag": "stable",
 		"targetplatform": [
-			"4.[3456789]"
+			"4.[3456789]",
+			"5.*"
 		],
 		"namespace": "GHSVS\\Template\\KoerperGhsvs",
 		"inheritable": 1
@@ -36,15 +37,15 @@
 		"docsDE": "",
 		"docsEN": "",
 		"lastTests": [
-			"Joomla 4.3",
-			"PHP 8.1",
-			"Astroid Framework 2.6.6"
+			"Joomla 5.0",
+			"PHP 8.2",
+			"Astroid Framework 5.0.3"
 		]
 	},
 	"minimumPhp": "8.1.0",
-	"maximumPhp": "8.99999.99999",
+	"maximumPhp": "",
 	"minimumJoomla": "4.3.0",
-	"maximumJoomla": "4.9999.9999",
+	"maximumJoomla": "5.9999.9999",
 	"allowDowngrades": "1",
 	"creationDate": "2023-09-25",
 	"licenseLong": "GNU General Public License version 3 or later; see LICENSE.txt.",
