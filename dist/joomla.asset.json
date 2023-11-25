@@ -1,8 +1,8 @@
 {
 	"$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
 	"name": "tpl_koerperghsvs",
-	"version": "2023.10.04",
-	"versionSub": "Astroid-2.6.6",
+	"version": "2023.11.24",
+	"versionSub": "Astroid-3.0.5",
 	"description": "Joomla site template based on Astroid Framework with several dependencies.",
 	"license": "GNU General Public License version 3 or later; see LICENSE.txt.",
 	"assets": [
@@ -21,9 +21,20 @@
 			"description": "custom.css wird vom Astroid geladen, falls da. JS aber wohl nicht.",
 			"type": "script",
 			"uri": "custom.js",
+			"weight": 2000,
 			"dependencies": [
 				"jquery"
 			]
+		},
+		{
+			"name": "koerperghsvs.google-recaptcha-api",
+			"description": "",
+			"type": "script",
+			"uri": "https://www.google.com/recaptcha/api.js",
+      "attributes": {
+        "async": true,
+				"defer": true
+      }
 		},
 		{
 			"name": "fontawesome",

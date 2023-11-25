@@ -7,18 +7,18 @@
 	<copyright>(C) 2019, G@HService Berlin Neukölln, Volkmar Volli Schlothauer.</copyright>
 	<license>GNU General Public License version 3 or later; see LICENSE.txt.</license>
 	<authorUrl>https://ghsvs.de</authorUrl>
-	<version>2023.10.04</version>
+	<version>2023.11.24</version>
 	<description>TPL_KOERPERGHSVS_XML_DESCRIPTION</description>
 
 	<updateservers><server type="extension" priority="1" name="TPL_KOERPERGHSVS">https://raw.githubusercontent.com/GHSVS-de/upadateservers/master/tpl_koerperghsvs-update.xml</server></updateservers>
 
-	<infourl>https://github.com/GHSVS-de/tpl_koerperghsvs/releases/tag/2023.10.04</infourl>
+	<infourl>https://github.com/GHSVS-de/tpl_koerperghsvs/releases/tag/2023.11.24</infourl>
 
 	<scriptfile>installerScript.php</scriptfile>
 	<minimumPhp>8.1.0</minimumPhp>
-	<maximumPhp>8.99999.99999</maximumPhp>
+	<maximumPhp></maximumPhp>
 	<minimumJoomla>4.3.0</minimumJoomla>
-	<maximumJoomla>4.9999.9999</maximumJoomla>
+	<maximumJoomla>5.9999.9999</maximumJoomla>
 	<allowDowngrades>1</allowDowngrades>
 	<inheritable>1</inheritable>
 
@@ -61,6 +61,8 @@
 		<position>left</position>
 		<position>right</position>
 		<position>newsletterSection-1</position>
+		<position>newsletter-text-above-captcha</position>
+		<position>newsletter-text-above-submit</position>
 		<position>footer-1</position>
 		<position>footer-2</position>
 		<position>footer-3</position>

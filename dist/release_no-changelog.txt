@@ -1,32 +1,28 @@
-2023.10.04
+2023.11.24
 
-Joomla site template KoerperGhsvs (TPL_KOERPERGHSVS) based on Astroid Framework. 2023.10.04
-
-Checksum entities: `&lt;sha256&gt;e52b4236622893b9310257425986b1692689e4e78e29b38be4cb5225e169b7e8&lt;/sha256&gt;`
+Joomla site template KoerperGhsvs (TPL_KOERPERGHSVS) based on Astroid Framework. 2023.11.24
 
 Joomla site template based on Astroid Framework with several dependencies.
 
+### Joomla 4.3+, Joomla 5
+
 ### Download
-[tpl_koerperghsvs-2023.10.04_Astroid-2.6.6.zip](https://github.com/GHSVS-de/tpl_koerperghsvs/raw/2023.10.04/dist/tpl_koerperghsvs-2023.10.04_Astroid-2.6.6.zip)
+[tpl_koerperghsvs-2023.11.24_Astroid-3.0.5.zip](https://github.com/GHSVS-de/tpl_koerperghsvs/raw/2023.11.24/dist/tpl_koerperghsvs-2023.11.24_Astroid-3.0.5.zip)
 
 ### Joomla-Target-Platform(s)
-4.[3456789]
+4.[3456789], 5.&ast;
 
 ### For the interested ones
-- [Compare releases 2023.09.25...2023.10.04](https://github.com/GHSVS-de/tpl_koerperghsvs/compare/2023.09.25...2023.10.04)
+- Deutsche Beschreibung:
+- English Description:
+- [Compare releases 2023.10.04...2023.11.24](https://github.com/GHSVS-de/tpl_koerperghsvs/compare/2023.10.04...2023.11.24)
 - minimumJoomla: 4.3.0
-- maximumJoomla: 4.9999.9999
+- maximumJoomla: 5.9999.9999
 - minimumPhp: 8.1.0
-- maximumPhp: 8.99999.99999
-- Checksum: `<sha256>e52b4236622893b9310257425986b1692689e4e78e29b38be4cb5225e169b7e8</sha256>`
+- maximumPhp:
+- Checksum: `<sha256>774d6b8e1fd6b6de7d851ca908a1853b865356f7fd06b9c245cbfab4b0ed3864</sha256>`
 - Readme: https://github.com/GHSVS-de/tpl_koerperghsvs#readme
 - Updates XML: https://raw.githubusercontent.com/GHSVS-de/upadateservers/master/tpl_koerperghsvs-update.xml
-- Last tests: Joomla 4.3<br>PHP 8.1<br>Astroid Framework 2.6.6
+- Last tests: Joomla 5.0<br>PHP 8.2<br>Astroid Framework 3.0
 - Language files: en-GB
-- Requires: Astroid Framework (library "astroid")<br>Astroid Plugin (plg_system_astroid)
-- Uses: 
-- Contained packages (sub Joomla extensions):
-```
-
-```
-
+- Requires: https://github.com/GHSVS-de/tpl_koerperghsvs/wiki/Voraussetzungen,-Empfohlen,-Requirements

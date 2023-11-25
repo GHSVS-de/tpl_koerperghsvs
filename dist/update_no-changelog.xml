@@ -1,4 +1,4 @@
-<!--TPL_KOERPERGHSVS Version 2023.10.04 Target platform: 4.[3456789]-->
+<!--TPL_KOERPERGHSVS Version 2023.11.24 Target platform: 4.[3456789]-->
 	<update>
 		<name>TPL_KOERPERGHSVS</name>
 		<description>Joomla site template based on Astroid Framework with several dependencies.</description>
@@ -6,10 +6,10 @@
 		<type>template</type>
 		<folder></folder>
 		<client>site</client>
-		<version>2023.10.04</version>
-		<infourl>https://github.com/GHSVS-de/tpl_koerperghsvs/releases/tag/2023.10.04</infourl>
+		<version>2023.11.24</version>
+		<infourl>https://github.com/GHSVS-de/tpl_koerperghsvs/releases/tag/2023.11.24</infourl>
 		<downloads>
-			<downloadurl type="full" format="zip">https://github.com/GHSVS-de/tpl_koerperghsvs/raw/2023.10.04/dist/tpl_koerperghsvs-2023.10.04_Astroid-2.6.6.zip</downloadurl>
+			<downloadurl type="full" format="zip">https://github.com/GHSVS-de/tpl_koerperghsvs/raw/2023.11.24/dist/tpl_koerperghsvs-2023.11.24_Astroid-3.0.5.zip</downloadurl>
 		</downloads>
 		<tags>
 			<tag>stable</tag>
@@ -18,6 +18,29 @@
 		<maintainerurl>https://ghsvs.de</maintainerurl>
 		<targetplatform name="joomla" version="4.[3456789]" />
 		<php_minimum>8.1.0</php_minimum>
-		<sha256>e52b4236622893b9310257425986b1692689e4e78e29b38be4cb5225e169b7e8</sha256>
+		<sha256>774d6b8e1fd6b6de7d851ca908a1853b865356f7fd06b9c245cbfab4b0ed3864</sha256>
 	</update>
-<!--/TPL_KOERPERGHSVS Version 2023.10.04 Target platform: 4.[3456789]-->
+<!--/TPL_KOERPERGHSVS Version 2023.11.24 Target platform: 4.[3456789]-->
+<!--TPL_KOERPERGHSVS Version 2023.11.24 Target platform: 5.*-->
+	<update>
+		<name>TPL_KOERPERGHSVS</name>
+		<description>Joomla site template based on Astroid Framework with several dependencies.</description>
+		<element>koerperghsvs</element>
+		<type>template</type>
+		<folder></folder>
+		<client>site</client>
+		<version>2023.11.24</version>
+		<infourl>https://github.com/GHSVS-de/tpl_koerperghsvs/releases/tag/2023.11.24</infourl>
+		<downloads>
+			<downloadurl type="full" format="zip">https://github.com/GHSVS-de/tpl_koerperghsvs/raw/2023.11.24/dist/tpl_koerperghsvs-2023.11.24_Astroid-3.0.5.zip</downloadurl>
+		</downloads>
+		<tags>
+			<tag>stable</tag>
+		</tags>
+		<maintainer>G@HService Berlin Neukölln, Volkmar Volli Schlothauer</maintainer>
+		<maintainerurl>https://ghsvs.de</maintainerurl>
+		<targetplatform name="joomla" version="5.*" />
+		<php_minimum>8.1.0</php_minimum>
+		<sha256>774d6b8e1fd6b6de7d851ca908a1853b865356f7fd06b9c245cbfab4b0ed3864</sha256>
+	</update>
+<!--/TPL_KOERPERGHSVS Version 2023.11.24 Target platform: 5.*-->
