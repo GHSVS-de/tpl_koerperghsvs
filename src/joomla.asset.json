@@ -7,23 +7,35 @@
 	"license": "{{licenseLong}}",
 	"assets": [
 		{
-			"name": "koerperghsvs.framework",
+			"name": "{{filename}}.framework",
 			"description": "Viele weitere werden stinknormal von Astroid geladen.",
 			"type": "preset",
 			"dependencies": [
 				"jquery-noconflict#script",
 				"jquery-migrate#script",
-				"koerperghsvs.custom#script"
+				"{{filename}}.custom#script"
 			]
 		},
 		{
-			"name": "koerperghsvs.custom",
+			"name": "{{filename}}.custom",
 			"description": "custom.css wird vom Astroid geladen, falls da. JS aber wohl nicht.",
 			"type": "script",
 			"uri": "custom.js",
+			"weight": 2000,
 			"dependencies": [
 				"jquery"
 			]
+		},
+		{
+			"name": "{{filename}}.google-recaptcha-api",
+			"description": "",
+			"type": "script",
+			"uri": "https://www.google.com/recaptcha/api.js",
+			"dependencies": [],
+      "attributes": {
+        "async": true,
+				"defer": true
+      }
 		},
 		{
 			"name": "fontawesome",
