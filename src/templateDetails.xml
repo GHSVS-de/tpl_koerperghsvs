@@ -61,6 +61,8 @@
 		<position>left</position>
 		<position>right</position>
 		<position>newsletterSection-1</position>
+		<position>newsletter-text-above-captcha</position>
+		<position>newsletter-text-above-submit</position>
 		<position>footer-1</position>
 		<position>footer-2</position>
 		<position>footer-3</position>
