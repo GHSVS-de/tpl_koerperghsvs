@@ -7,6 +7,7 @@ log.txt
 prepros.config
 prepros-6.config
 *.zip
+!/media/images/favicons_koerperundraum.zip
 __AUFPASSEN Neuer Updateserver/
 __AUFPASSEN Version seit 2020-03/
 __AUFPASSEN Neuer Updateserver bs3ghsvs2020/
@@ -18,6 +19,6 @@ src/vendor/bin/pscss
 _composer/vendor
 src/vendor/scssphp/scssphp/bin/pscss
 build/build-svgs - Kopie.js
-/dist/*.xml
-/dist/*.txt
+# /dist/*.xml
+# /dist/*.txt
 dist copy/
