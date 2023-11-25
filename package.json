@@ -24,8 +24,7 @@
 	"releaseTxt": {
 		"title": "Joomla site template KoerperGhsvs (TPL_KOERPERGHSVS) based on Astroid Framework.",
 		"requires": [
-			"Astroid Framework (library \"astroid\")",
-			"Astroid Plugin (plg_system_astroid)"
+			"https://github.com/GHSVS-de/tpl_koerperghsvs/wiki/Voraussetzungen,-Empfohlen,-Requirements"
 		],
 		"uses": [],
 		"language": ["en-GB"]
@@ -39,7 +38,7 @@
 		"lastTests": [
 			"Joomla 5.0",
 			"PHP 8.2",
-			"Astroid Framework 5.0.3"
+			"Astroid Framework 3.0"
 		]
 	},
 	"minimumPhp": "8.1.0",
