@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension type="template" client="site" method="upgrade">
+	<name>koerperghsvs</name>
+	<author>G@HService Berlin Neukölln, Volkmar Volli Schlothauer</author>
+	<creationDate>2023-09-25</creationDate>
+	<copyright>(C) 2019, G@HService Berlin Neukölln, Volkmar Volli Schlothauer.</copyright>
+	<license>GNU General Public License version 3 or later; see LICENSE.txt.</license>
+	<authorUrl>https://ghsvs.de</authorUrl>
+	<version>2023.10.04</version>
+	<description>TPL_KOERPERGHSVS_XML_DESCRIPTION</description>
+
+	<updateservers><server type="extension" priority="1" name="TPL_KOERPERGHSVS">https://raw.githubusercontent.com/GHSVS-de/upadateservers/master/tpl_koerperghsvs-update.xml</server></updateservers>
+
+	<infourl>https://github.com/GHSVS-de/tpl_koerperghsvs/releases/tag/2023.10.04</infourl>
+
+	<scriptfile>installerScript.php</scriptfile>
+	<minimumPhp>8.1.0</minimumPhp>
+	<maximumPhp>8.99999.99999</maximumPhp>
+	<minimumJoomla>4.3.0</minimumJoomla>
+	<maximumJoomla>4.9999.9999</maximumJoomla>
+	<allowDowngrades>1</allowDowngrades>
+	<inheritable>1</inheritable>
+
+	<files>
+		<folder>html</folder>
+		<folder>language</folder>
+		<folder>src</folder>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>index.php</filename>
+		<filename>installerScript.php</filename>
+		<filename>joomla.asset.json</filename>
+		<filename>offline.php</filename>
+		<!-- Not implemented yet -->
+		<filename>print.php</filename>
+		<filename>templateDetails.xml</filename>
+	</files>
+
+	<media folder="media" destination="templates/site/koerperghsvs">
+		<folder>_stile-sicherungen</folder>
+		<folder>astroid</folder>
+		<folder>css</folder>
+		<folder>fonts</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>params</folder>
+		<folder>scss</folder>
+		<folder>scss-ghsvs</folder>
+	</media>
+	<namespace path="src">GHSVS\Template\KoerperGhsvs</namespace>
+	<positions>
+		<position>astroid-header</position>
+		<position>astroid-top-social</position>
+		<position>astroid-top-contact</position>
+		<position>slider</position>
+		<position>breadcrumb</position>
+		<position>aboveContent-1</position>
+		<position>content-top</position>
+		<position>content-bottom</position>
+		<position>left</position>
+		<position>right</position>
+		<position>newsletterSection-1</position>
+		<position>footer-1</position>
+		<position>footer-2</position>
+		<position>footer-3</position>
+		<position>footer-bar</position>
+		<position>copyright</position>
+		<position>headerBlock01</position>
+		<position>headerBlock02</position>
+		<position>offcanvas</position>
+		<position>debug</position>
+	</positions>
+
+	<config addfieldpath="/libraries/astroid/framework/fields" addfieldprefix="GHSVS\Template\KoerperGhsvs\Site\Field">
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="astroid" type="astroidmanagerlink"></field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
