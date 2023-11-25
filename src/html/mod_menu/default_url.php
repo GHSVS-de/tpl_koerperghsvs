@@ -1,16 +1,17 @@
 <?php
-
-/**
- * @package     Joomla.Site
- * @subpackage  mod_menu
- *
- * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
- */
-
 defined('_JEXEC') or die;
 
+use Joomla\CMS\HTML\HTMLHelper;
+use Joomla\Filter\OutputFilter;
+use GHSVS\Template\KoerperGhsvs\Site\Helper\TemplateHelper;
+
 $attributes = array();
+
+// Bugfix für Redim-Plugin, das sonst immer auf Startseite führt.
+if ($item->link === '?cookiehint=set')
+{
+	$item->flink = TemplateHelper::getCookiehintLink();
+}
 
 if ($item->anchor_title) {
 	$attributes['title'] = $item->anchor_title;
@@ -32,9 +33,9 @@ $linktype = $item->title;
 if ($item->menu_image) {
 	if ($item->menu_image_css) {
 		$image_attributes['class'] = $item->menu_image_css;
-		$linktype = JHtml::_('image', $item->menu_image, $item->title, $image_attributes);
+		$linktype = HTMLHelper::_('image', $item->menu_image, $item->title, $image_attributes);
 	} else {
-		$linktype = JHtml::_('image', $item->menu_image, $item->title);
+		$linktype = HTMLHelper::_('image', $item->menu_image, $item->title);
 	}
 
 	if ($item->getParams()->get('menu_text', 1)) {
@@ -80,4 +81,4 @@ if (isset($astroid_menu_options['subtitle']) && !empty($astroid_menu_options['su
 }
 // Show icon subtitle End here
 
-echo JHtml::_('link', JFilterOutput::ampReplace(htmlspecialchars($item->flink, ENT_COMPAT, 'UTF-8', false)), '<span class="nav-title">' . $iconHtml . $linktype . $badgeHtml . '</span>' . $subtitle, $attributes);
+echo HTMLHelper::_('link', OutputFilter::ampReplace(htmlspecialchars($item->flink, ENT_COMPAT, 'UTF-8', false)), '<span class="nav-title">' . $iconHtml . $linktype . $badgeHtml . '</span>' . $subtitle, $attributes);
