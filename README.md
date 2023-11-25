@@ -18,10 +18,14 @@ Das ist kein Template, das man installiert und dann läuft es reibungslos. Es br
 - PRETTY_PRINT
 
 ```
+// Seit Framework 3 kann man Zielordner für Stile-JSON nicht mehr selbst wählen. Die gehen fix nach `\media\templates\site\koerperghsvs\astroid\presets\`. Sie bekommen auch keinen lesbaren Datumsstring mehr im Dateinamen.
+// Also im Backend Stil speichern.
+// Dann Datei nach `/media/templates/site/koerperghsvs/_stile-sicherungen` kopieren. Ggf. umbenennen. Datum rein?
+
 // Bsp. 16.json war letzter, eigener Export oder das, was Astroid im Ordner
-//  media/templates/site/koerperghsvs/params/ abgelegt hat.
-// Targetinhalt 16-target.json wird dann nach media/astroid/default.json dieses
-//  Repos **händisch** hineinkopiert.
+//  `/media/templates/site/koerperghsvs/params/` abgelegt hat.
+// Nach PHP-AUsführung dann 16-target.json nach media/astroid/default.json dieses
+//  Repos **händisch** kopieren.
 
 $jsonFiles = ['16'];
 $jsonPath = JPATH_SITE . '/media/templates/site/koerperghsvs/_stile-sicherungen';
